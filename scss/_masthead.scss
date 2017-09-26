@@ -2,7 +2,7 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
+  // NOTE: Background images are set within the HTML using inline CSS!
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -25,6 +25,71 @@ header.masthead {
       @include heading-font;
     }
   }
+
+    .site-heading,
+    .post-heading,
+    .page-heading {
+        padding: 100px 0 50px;
+        color: white;
+        @media only screen and (min-width: 768px) {
+            padding: 150px 0;
+        }
+    }
+
+    .site-heading,
+    .page-heading {
+        text-align: center;
+        h1 {
+            font-size: 50px;
+            margin-top: 0;
+        }
+        .subheading {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.1;
+            display: block;
+            margin: 10px 0 0;
+        }
+        @media only screen and (min-width: 768px) {
+            h1 {
+                font-size: 80px;
+            }
+        }
+    }
+
+    .post-heading {
+        h1 {
+            font-size: 35px;
+        }
+        .subheading,
+        .meta {
+            line-height: 1.1;
+            display: block;
+        }
+        .subheading {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 10px 0 30px;
+        }
+        .meta {
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            @include serif-font;
+            a {
+                color: white;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            h1 {
+                font-size: 55px;
+            }
+            .subheading {
+                font-size: 30px;
+            }
+        }
+    }
+
 }
 @media(min-width:768px) {
   header.masthead {

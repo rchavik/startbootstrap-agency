@@ -18,6 +18,18 @@ a {
   }
 }
 
+.bg-light {
+  a {
+    color: #343a40;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: lighten(#343a40, 10%);
+    }
+  }
+}
+
 h1,
 h2,
 h3,
